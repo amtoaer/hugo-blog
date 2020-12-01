@@ -10,26 +10,20 @@
 
   {{- if .Site.Params.staticPrefix -}}
   <link rel="dns-prefetch" href="{{ .Site.Params.staticPrefix }}" />
-  {{- end -}} <link rel="preload" href="{{ .Site.Params.staticPrefix }}{{
-  "js/highlight.pack.js" | relURL }}" as="script" />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"
-  />
+  {{- end -}}
+  <link rel="preload" href="{{ .Site.Params.staticPrefix }}{{ "js/highlight.pack.js" | relURL }}" as="script" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
   <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
   {{- if .Site.Params.favicon -}}
   <link rel="apple-touch-icon" href="{{ .Site.Params.favicon }}" />
   <link rel="icon" href="{{ .Site.Params.favicon }}" />
   <link rel="shortcut" href="{{ .Site.Params.favicon }}" />
   {{- end -}}
-  <link
-    rel="alternate"
-    type="application/atom+xml"
-    href="{{.Site.BaseURL}}index.xml"
-    title="{{ .Site.Title }}"
-  />
+  <link rel="alternate" type="application/atom+xml" href="{{.Site.BaseURL}}index.xml" title="{{ .Site.Title }}">
 
-  {{ partial "seo" . }} {{- if .IsHome -}}
+  {{ partial "seo" . }}
+
+  {{- if .IsHome -}}
   <title>{{ .Site.Title }}</title>
   <meta property="og:title" content="{{ .Site.Title }}" />
   <meta property="og:type" content="website" />
@@ -39,33 +33,29 @@
   <title>{{ .Title }} - {{ .Site.Title }}</title>
   <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}" />
   <meta property="og:type" content="article" />
-  <meta
-    property="og:description"
-    content="{{ default .Summary .Description }}"
-  />
+  <meta property="og:description" content="{{ default .Summary .Description }}" />
   <meta name="description" content="{{ default .Summary .Description }}" />
   {{- end }}
   <meta property="og:locale" content="{{ .Site.LanguageCode }}" />
   {{- if .Params.album -}}
   <meta property="og:image" content="{{ .Params.album }}" />
-  {{ end }} <link rel="stylesheet" href="{{ .Site.Params.staticPrefix }}{{
-  "css/flexboxgrid-6.3.1.min.css" | relURL }}" /> {{ if not .IsHome -}} <link
-  rel="stylesheet" href="{{ .Site.Params.staticPrefix }}{{
-  "css/github-markdown.css" | relURL }}" /> <link rel="stylesheet" href="{{
-  .Site.Params.staticPrefix }}{{ "css/highlight/tomorrow.min.css" | relURL }}"
-  /> {{- end }} <link rel="stylesheet" href="{{ "css/index.css" | relURL }}"> {{
-  range .Site.Params.extraCSSFiles -}}
-  <link
-    rel="stylesheet"
-    href="{{ $.Site.Params.staticPrefix }}{{ . | relURL }}"
-  />
-  {{- end }} <link href="{{ .Site.Params.staticPrefix }}{{ "index.xml" | relURL
-  }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
+  {{ end }}
+
+  <link rel="stylesheet" href="{{ .Site.Params.staticPrefix }}{{ "css/flexboxgrid-6.3.1.min.css" | relURL }}" />
+  {{ if not .IsHome -}}
+  <link rel="stylesheet" href="{{ .Site.Params.staticPrefix }}{{ "css/github-markdown.css" | relURL }}" />
+  <link rel="stylesheet" href="{{ .Site.Params.staticPrefix }}{{ "css/highlight/tomorrow.min.css" | relURL }}" />
+  {{- end }}
+  <link rel="stylesheet" href="{{ "css/index.css" | relURL }}">
+
+  {{ range .Site.Params.extraCSSFiles -}}
+  <link rel="stylesheet" href="{{ $.Site.Params.staticPrefix }}{{ . | relURL }}">
+  {{- end }}
+
+  <link href="{{ .Site.Params.staticPrefix }}{{ "index.xml" | relURL }}" rel="alternate" type="application/rss+xml"
+    title="{{ .Site.Title }}">
   <!-- fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Arvo|Permanent+Marker|Bree+Serif"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css?family=Arvo|Permanent+Marker|Bree+Serif" rel="stylesheet">
   <!-- quicklink require -->
   <!-- <script>
     /* Disable minification (remove `.min` from URL path) for more info 

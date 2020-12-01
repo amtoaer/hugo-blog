@@ -1,6 +1,6 @@
 baseURL = "https://allwens.work/"
 languageCode = "zh-cn"
-title = "My New Hugo Site"
+title = "Hoar"
 theme = "yinyang"
 DefaultContentLanguage = "cn"
 
@@ -11,6 +11,7 @@ homepage = "https://allwens.work/"
 [params]
 headTitle = "Hoar"
 mainSections = ["posts"]
+gitalk = true
 
 
 [[params.socials]]

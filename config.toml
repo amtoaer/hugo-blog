@@ -1,0 +1,18 @@
+baseURL = "https://allwens.work/"
+languageCode = "zh-cn"
+title = "My New Hugo Site"
+theme = "yinyang"
+DefaultContentLanguage = "cn"
+
+[author]
+name = "amtoaer"
+homepage = "https://allwens.work/"
+
+[params]
+headTitle = "Hoar"
+mainSections = ["posts"]
+
+
+[[params.socials]]
+name = "Github"
+link = "https://github.com/amtoaer"

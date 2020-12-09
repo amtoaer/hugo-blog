@@ -98,6 +98,7 @@ sudo sbupdate
 #### 对于`systemd-boot`的特殊处理
 
 > 待填坑
+
 ### 写入Key到Bios
 
 完成上面的步骤后，已经万事具备，只欠东风了，最后我们只需要将Key写入到Bios。
